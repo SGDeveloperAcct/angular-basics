@@ -1,0 +1,67 @@
+<h2>Model 1</h2>
+<div *ngIf="users">
+  <div *ngFor="let user of users">
+    <div [ngSwitch]="user.gender">
+      <div [class]="user.gender" *ngSwitchCase="'male'">
+        {{ user.name }}
+      </div>
+      <div [class]="user.gender" *ngSwitchCase="'female'">
+        {{ user.name }}
+      </div>
+      <div *ngSwitchDefault>
+        {{ user.name }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>Model 2</h2>
+<div *ngIf="users1; else noUsersFound">
+  <div *ngFor="let user of users1">
+    <div [ngSwitch]="user.gender">
+      <div [class]="user.gender" *ngSwitchCase="'male'">
+        {{ user.name }}
+      </div>
+      <div [class]="user.gender" *ngSwitchCase="'female'">
+        {{ user.name }}
+      </div>
+      <div *ngSwitchDefault>
+        {{ user.name }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #noUsersFound>No users found</ng-template>
+
+<h2>Model 3</h2>
+<ng-template [ngIf]="users2" [ngIfThen]="usersFound" [ngIfElse]="noUsersFound">
+</ng-template>
+<ng-template #usersFound>
+  <div
+    *ngFor="
+      let user of users2;
+      trackBy: getName;
+      index as i;
+      even as isEven;
+      odd as isOdd;
+      first as isFirst;
+      last as isLast
+    "
+  >
+    <div [ngSwitch]="user.gender">
+      <div [class]="user.gender" *ngSwitchCase="'male'">
+        {{ isEven }} {{ isOdd }} {{ isFirst }} {{ isLast }} {{ i }}
+        {{ user.name }}
+      </div>
+      <div [class]="user.gender" *ngSwitchCase="'female'">
+        {{ isEven }} {{ isOdd }} {{ isFirst }} {{ isLast }} {{ i }}
+        {{ user.name }}
+      </div>
+      <div *ngSwitchDefault>
+        {{ isEven }} {{ isOdd }} {{ isFirst }} {{ isLast }} {{ i }}
+        {{ user.name }}
+      </div>
+    </div>
+  </div>
+</ng-template>
