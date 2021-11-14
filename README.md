@@ -11,3 +11,6 @@ Model 2
 Model 3
 
 	*ngFor examples for index, odd, even, first, last
+
+
+https://stackblitz.com/edit/angular-ivy-av5gp8
