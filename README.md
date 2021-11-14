@@ -1,3 +1,10 @@
-# angular-ivy-av5gp8
+# Angular - Structural Directives - Basic
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-ivy-av5gp8)
+Model 1
+Simple and direct usage of *ngIf, *ngFor, *ngSwitch using shorthand syntax
+
+Model 2
+*ngIf render different template when no users found and trackBy
+
+Model 3
+*ngFor examples for index, odd, even, first, last
