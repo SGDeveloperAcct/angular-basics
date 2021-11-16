@@ -32,11 +32,11 @@ Pipes
     		percent
     		json
     		slice
-    				This pipe accepts an observable or a promise and lets us render the output of an observable or promise without having to call then or subscribe.
     		async
     				This pipe accepts an observable or a promise and lets us render the output of an observable or promise without having to call then or subscribe.
     		currency
 
     Custom pipes
+            exponentialStrength
 
 https://stackblitz.com/edit/angular-ivy-av5gp8
