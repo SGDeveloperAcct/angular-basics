@@ -19,12 +19,16 @@ Pipes
     Pipes are simple functions to use in template expressions to accept an input value and return a transformed value.
     Pipes are useful because you can use them throughout your application, while only declaring each pipe once.
 
+    By default, pipes are defined as pure so that Angular executes the pipe only when it detects a pure change to the input value.
+
+    A pure change is either a change to a primitive input value (such as String, Number, Boolean, or Symbol), or a changed object reference (such as Date, Array, Function, or Object).
+
     Inbuilt pipes
     		uppercase
     		lowercase
     		date
     		number
-    				”{minIntegerDigits}. {minFractionDigits}-{maxFractionDigits}”
+    				”{minIntegerDigits}.{minFractionDigits}-{maxFractionDigits}”
     		percent
     		json
     		slice
@@ -32,7 +36,6 @@ Pipes
     		async
     				This pipe accepts an observable or a promise and lets us render the output of an observable or promise without having to call then or subscribe.
     		currency
-
 
     Custom pipes
 
