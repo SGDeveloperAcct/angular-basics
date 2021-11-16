@@ -1,4 +1,5 @@
 import { Component, VERSION } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'my-app',
@@ -44,6 +45,13 @@ export class AppComponent {
       name: 'User4',
     },
   ];
+
+  date = new Date();
+  sampleJson = { name: 'test', age: 10 };
+  sampleArray = [1, 2, 3, 4, 5];
+  asyncTest = new Observable((subscriber) => {
+    subscriber.next([1, 2]);
+  });
 
   getName(index, user) {
     return user.name;

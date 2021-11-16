@@ -65,3 +65,28 @@
     </div>
   </div>
 </ng-template>
+
+<h2>Inbuilt pipes</h2>
+{{ date | date: 'dd-MM-yyyy' }}
+<br />
+{{ date | date: 'shortTime' }}
+<br />
+{{ date | date: 'shortDate' }}
+<br />
+{{ 'snyRTadfdsfsdf' | uppercase }}
+<br />
+{{ 'snyRTadfdsfsdf' | lowercase }}
+<br />
+{{ 123.4567 | number: '3.2-3' }}
+<br />
+{{ 100 | percent: '2.0' }}
+<br />
+{{ sampleJson | json }}
+<br />
+{{ sampleArray | slice: 1:2 }}
+<br />
+{{ asyncTest | async }}
+<br />
+{{ 100 | currency: 'CAD':'symbol-narrow' }}
+
+<h2>Custom pipes</h2>
